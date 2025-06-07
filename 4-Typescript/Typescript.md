@@ -165,15 +165,6 @@ type creditCardDetails = credirCardNumbers & credirCardDate & {
 
 ---
 
-## Arrays and Tuples
-
-```ts
-const SuperHeros: string[] = [];
-type man = [string, number];
-```
-
----
-
 ## Union Types
 
 ```ts
@@ -200,37 +191,6 @@ const enum Payment {
     PayPal,
 }
 ```
-
----
-
-## Object-Oriented Programming (OOP)
-
-### Class
-
-```ts
-class Student {
-    constructor(private _id: number) {}
-
-    get id(): number {
-        return this._id;
-    }
-
-    set id(value: number) {
-        if(value > 0) this._id = value;
-        else throw new Error("ID must be positive");
-    }
-}
-```
-
-### Abstract Class
-
-```ts
-abstract class TakePhoto {
-    constructor(public cameraMode: string, public filter: string, public iso: number) {}
-    abstract displayinfo(): void;
-}
-```
-
 ---
 
 ## Record Utility
@@ -284,6 +244,37 @@ function typeNarrowing(val: number | string) {
 ```
 
 ---
+
+## ECMAScript Methods
+
+- map, filter, find, some, every, and reduce array methods
+
+```ts
+// ** array of numbers
+const numbers: number[] = [1, 2, 3, 4, 5, 10];
+
+const squaredNumbers = numbers.map((number) => number * number);
+console.log(squaredNumbers); // [1, 4, 9, 16, 25, 100]
+
+const eventNumbers = numbers.filter((number) => number % 2 === 0);
+console.log(eventNumbers); // [2, 4, 10]
+
+const foundNumber = numbers.find((number) => number === 15);
+console.log(foundNumber); // undefined
+
+const hasNegativeNumber = numbers.some((number) => number < 0);
+console.log(hasNegativeNumber); // false
+
+const isAllNegativeNumbers = numbers.every((number) => number > 0);
+console.log(isAllNegativeNumbers); // true
+
+const total = numbers.reduce((previousValue, currentValue) => previousValue + currentValue);
+console.log(total); // 25
+
+```
+
+---
+
 
 ## Synchronous vs Asynchronous
 
