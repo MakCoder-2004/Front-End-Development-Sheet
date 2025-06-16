@@ -13,6 +13,8 @@
 - [Material UI](https://mui.com/material-ui/)
 - [React Bits](https://www.reactbits.dev/)
 - [Daisy UI](https://www.reactbits.dev/)
+- [Magic UI](https://magicui.design/)
+- [lukacho UI](https://ui.lukacho.com/)
 
 
 ## API JSON Files
